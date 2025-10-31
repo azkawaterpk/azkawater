@@ -3,71 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azka Water — Pure Water, Pure Life</title>
-  <meta name="description" content="Azka Water delivers fresh bottled water in Gujranwala, Pakistan. 19L, 1.5L, 500ml bottles available. Contact us for orders.">
+  <title>Azka Water — Pure Water Pure Life</title>
   <style>
-    /* Reset & Base */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #ffffff;
       color: #004d00;
-      line-height: 1.6;
     }
-    h1, h2, h3 {
-      margin: 0.5rem 0;
-    }
-    a {
-      text-decoration: none;
-    }
-
-    /* Header */
     header {
       background-color: #d4f8d4;
       text-align: center;
       padding: 2rem 1rem;
     }
     header h1 {
-      font-size: 2.5rem;
-      color: #004d00;
+      margin: 0;
+      font-size: 2rem;
     }
     header p {
       font-size: 1.2rem;
       color: #007a33;
     }
-
-    /* Section */
     section {
-      padding: 2rem 1rem;
+      padding: 1.5rem;
       text-align: center;
     }
-
-    /* Product Grid */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      gap: 1rem;
+      margin-top: 1rem;
     }
     .product {
       border: 1px solid #cce5cc;
       border-radius: 10px;
       padding: 1rem;
       background-color: #f9fff9;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .product img {
-      width: 150px;
-      height: auto;
-      margin-bottom: 0.5rem;
-      border-radius: 5px;
+      width: 200px;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
-
-    /* Buttons */
+    footer {
+      background-color: #d4f8d4;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
     .btn {
       background-color: #007a33;
       color: white;
@@ -76,64 +58,39 @@
       border-radius: 5px;
       font-size: 1rem;
       cursor: pointer;
+      text-decoration: none;
       display: inline-block;
       margin-top: 1rem;
-      transition: background-color 0.3s;
     }
     .btn:hover {
       background-color: #005f26;
     }
-
-    /* Footer */
-    footer {
-      background-color: #d4f8d4;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Images */
-    @media (max-width: 600px) {
-      .products {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <h1>Azka Water</h1>
     <p>Pure Water — Pure Life</p>
   </header>
 
-  <!-- Products Section -->
   <section>
     <h2>Our Products</h2>
     <div class="products">
       <div class="product">
-        <img src="19l.jpg" alt="Azka Water 19L Bottle">
+        <img src="IMG-20251001-WA0012.jpg" alt="19L Bottle">
         <h3>19L Bottles</h3>
         <p>PKR 1500 per bottle</p>
       </div>
       <div class="product">
-        <img src="1.5l.jpg" alt="Azka Water 1.5L Bottles">
+        <img src="IMG-20251001-WA0013.jpg" alt="1.5L Bottles">
         <h3>1.5L Bottles</h3>
         <p>PKR 360 per pet (6 bottles)</p>
       </div>
       <div class="product">
-        <img src="500ml.jpg" alt="Azka Water 500ml Bottles">
         <h3>500ml Bottles</h3>
         <p>PKR 360 per pet (12 bottles)</p>
       </div>
       <div class="product">
-        <img src="330ml.jpg" alt="Azka Water 330ml Bottles">
         <h3>330ml Bottles</h3>
         <p>Coming soon!</p>
       </div>
@@ -141,17 +98,9 @@
     <a href="tel:+923021607004" class="btn">Enquire Now</a>
   </section>
 
-  <!-- Contact Section -->
-  <section>
-    <h2>Contact Us</h2>
-    <p>📍 DC Road, Civil Lines, Gujranwala, Pakistan</p>
-    <p>📞 +92 302 1607004 | +92 300 9645627 | +92 300 8640032</p>
-    <p>📧 info@azkawater.com</p>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Azka Water. All rights reserved.</p>
+    <p>📍 DC Road, Civil Lines, Gujranwala</p>
+    <p>📞 +92 302 1607004 | +92 300 9645627 | +92 300 8640032</p>
   </footer>
 </body>
 </html>
