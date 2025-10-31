@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://azkawaterpk.github.io/azkawater/sitemap.xml
