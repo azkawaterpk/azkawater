@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Azka Water — Pure Water Pure Life</title>
+  <meta name="description" content="Azka Water — Pure Water, Pure Life. Delivering premium bottled water in Gujranwala. 19L, 1.5L, 500ml and more. Call +92 302 1607004.">
+  <meta name="keywords" content="Azka Water, bottled water Gujranwala, pure water Pakistan, 19 litre water bottle, Azka Water Gujranwala">
+  <meta name="author" content="Azka Water">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -30,19 +33,35 @@
     }
     .products {
       display: grid;
-      gap: 1rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
     .product {
       border: 1px solid #cce5cc;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 1rem;
       background-color: #f9fff9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .product:hover {
+      transform: scale(1.03);
     }
     .product img {
       width: 200px;
+      height: auto;
       border-radius: 10px;
       margin-bottom: 10px;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 1.2rem;
+    }
+    .product p {
+      margin: 0;
+      color: #007a33;
+      font-weight: bold;
     }
     footer {
       background-color: #d4f8d4;
@@ -77,16 +96,17 @@
     <h2>Our Products</h2>
     <div class="products">
       <div class="product">
-        <img src="IMG-20251001-WA0012.jpg" alt="19L Bottle">
-        <h3>19L Bottles</h3>
+        <img src="IMG-20251001-WA0013.jpg" alt="19L Bottle">
+        <h3>19L Bottle</h3>
         <p>PKR 1500 per bottle</p>
       </div>
       <div class="product">
-        <img src="IMG-20251001-WA0013.jpg" alt="1.5L Bottles">
+        <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottles">
         <h3>1.5L Bottles</h3>
         <p>PKR 360 per pet (6 bottles)</p>
       </div>
       <div class="product">
+        <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottles">
         <h3>500ml Bottles</h3>
         <p>PKR 360 per pet (12 bottles)</p>
       </div>
