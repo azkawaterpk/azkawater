@@ -13,7 +13,7 @@
   <meta name="keywords" content="Azka Water, water delivery Gujranwala, mineral water, pure drinking water, 19L bottle, 1.5L, 500ml, Azka" />
   <meta name="author" content="Azka Water" />
 
-  <!-- Open Graph for social media -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Azka Water — Pure Water Pure Life" />
   <meta property="og:description" content="Pure and refreshing drinking water bottles available in Gujranwala. Contact Azka Water today!" />
   <meta property="og:image" content="https://azkawaterpk.github.io/azkawater/IMG-20251001-WA0013.jpg" />
@@ -27,9 +27,12 @@
       color: #004d00;
     }
 
-    /* Navigation */
+    /* Sticky Navigation */
     nav {
       background-color: #007a33;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       justify-content: center;
       padding: 1rem 0;
@@ -59,7 +62,7 @@
       color: #007a33;
     }
 
-    /* About Us */
+    /* About Us Section */
     #about {
       padding: 2rem 1rem;
       text-align: center;
@@ -72,7 +75,7 @@
       line-height: 1.5;
     }
 
-    /* Products */
+    /* Products Section */
     section#products {
       padding: 2rem 1rem;
       text-align: center;
@@ -102,6 +105,7 @@
       transform: scale(1.05);
     }
 
+    /* Buttons */
     .btn {
       background-color: #007a33;
       color: white;
@@ -113,9 +117,25 @@
       text-decoration: none;
       display: inline-block;
       margin-top: 1rem;
+      transition: background-color 0.3s ease;
     }
     .btn:hover {
       background-color: #005f26;
+    }
+
+    /* WhatsApp Button */
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
     }
 
     /* Footer */
@@ -125,7 +145,6 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-
     iframe {
       margin-top: 10px;
       border: 0;
@@ -147,7 +166,6 @@
         grid-template-columns: 1fr;
       }
     }
-
   </style>
 </head>
 
@@ -161,7 +179,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header Banner -->
+  <!-- Header -->
   <header id="home">
     <h1>Azka Water</h1>
     <p>Pure Water — Pure Life</p>
@@ -197,14 +215,21 @@
         <p>Coming soon!</p>
       </div>
     </div>
+
+    <!-- Buttons -->
     <a href="tel:+923021607004" class="btn">Enquire Now</a>
+    <a href="https://wa.me/923021607004?text=Hello%20Azka%20Water,%20I%20would%20like%20to%20place%20an%20order." 
+       class="btn-whatsapp" target="_blank" rel="noopener">
+       Order Now via WhatsApp
+    </a>
   </section>
 
   <!-- Footer / Contact -->
   <footer id="contact">
     <p>📍 DC Road, Civil Lines, Gujranwala</p>
     <p>📞 +92 302 1607004 | +92 300 9645627 | +92 300 8640032</p>
-    <!-- Embedded Google Map -->
+
+    <!-- Google Map -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.918640576842!2d74.18011941520718!3d32.16479568097946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391fdf00ffed63a3%3A0x7c44ab7c99edb2b2!2sDC%20Road%2C%20Civil%20Lines%2C%20Gujranwala!5e0!3m2!1sen!2s!4v1701468599999!5m2!1sen!2s"
       allowfullscreen=""
