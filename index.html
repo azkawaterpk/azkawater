@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Azka Water — Pure Water Pure Life</title>
 
-  <!-- ✅ Google Verification -->
+  <!-- Google Verification -->
   <meta name="google-site-verification" content="g6OXbOVgmYKAdCsz5ZB-SHuYXcNACc-ffSzre9BBD_0" />
 
-  <!-- ✅ SEO Tags -->
+  <!-- SEO Tags -->
   <meta name="description" content="Azka Water provides pure and refreshing bottled water in Gujranwala. Order 19L, 1.5L, and 500ml bottles — pure water, pure life!" />
   <meta name="keywords" content="Azka Water, water delivery Gujranwala, mineral water, pure drinking water, 19L bottle, 1.5L, 500ml, Azka" />
   <meta name="author" content="Azka Water" />
 
-  <!-- ✅ Open Graph (for Google & social media preview) -->
+  <!-- Open Graph for social media -->
   <meta property="og:title" content="Azka Water — Pure Water Pure Life" />
   <meta property="og:description" content="Pure and refreshing drinking water bottles available in Gujranwala. Contact Azka Water today!" />
   <meta property="og:image" content="https://azkawaterpk.github.io/azkawater/IMG-20251001-WA0013.jpg" />
@@ -26,6 +26,25 @@
       background-color: #ffffff;
       color: #004d00;
     }
+
+    /* Navigation */
+    nav {
+      background-color: #007a33;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header Banner */
     header {
       background-color: #d4f8d4;
       text-align: center;
@@ -39,14 +58,30 @@
       font-size: 1.2rem;
       color: #007a33;
     }
-    section {
-      padding: 1.5rem;
+
+    /* About Us */
+    #about {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #f0fff0;
+    }
+    #about p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* Products */
+    section#products {
+      padding: 2rem 1rem;
       text-align: center;
     }
     .products {
       display: grid;
       gap: 1rem;
       margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .product {
       border: 1px solid #cce5cc;
@@ -56,7 +91,8 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .product img {
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       border-radius: 10px;
       margin-bottom: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -65,12 +101,7 @@
     .product img:hover {
       transform: scale(1.05);
     }
-    footer {
-      background-color: #d4f8d4;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+
     .btn {
       background-color: #007a33;
       color: white;
@@ -86,16 +117,64 @@
     .btn:hover {
       background-color: #005f26;
     }
+
+    /* Footer */
+    footer {
+      background-color: #d4f8d4;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    iframe {
+      margin-top: 10px;
+      border: 0;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-  <header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header Banner -->
+  <header id="home">
     <h1>Azka Water</h1>
     <p>Pure Water — Pure Life</p>
   </header>
 
-  <section>
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Azka Water has been supplying pure and healthy drinking water across Gujranwala. We offer 19L, 1.5L, and 500ml bottles with fast delivery. Pure Water — Pure Life.</p>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
     <h2>Our Products</h2>
     <div class="products">
       <div class="product">
@@ -103,31 +182,36 @@
         <h3>19L Bottles</h3>
         <p>PKR 1500 per bottle</p>
       </div>
-
       <div class="product">
         <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottle">
         <h3>1.5L Bottles</h3>
         <p>PKR 360 per pet (6 bottles)</p>
       </div>
-
       <div class="product">
         <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottle">
         <h3>500ml Bottles</h3>
         <p>PKR 360 per pet (12 bottles)</p>
       </div>
-
       <div class="product">
         <h3>330ml Bottles</h3>
         <p>Coming soon!</p>
       </div>
     </div>
-
     <a href="tel:+923021607004" class="btn">Enquire Now</a>
   </section>
 
-  <footer>
+  <!-- Footer / Contact -->
+  <footer id="contact">
     <p>📍 DC Road, Civil Lines, Gujranwala</p>
     <p>📞 +92 302 1607004 | +92 300 9645627 | +92 300 8640032</p>
+    <!-- Embedded Google Map -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.918640576842!2d74.18011941520718!3d32.16479568097946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391fdf00ffed63a3%3A0x7c44ab7c99edb2b2!2sDC%20Road%2C%20Civil%20Lines%2C%20Gujranwala!5e0!3m2!1sen!2s!4v1701468599999!5m2!1sen!2s"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </footer>
+
 </body>
 </html>
