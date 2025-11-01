@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azka Water — أزكى واٹر | Pure Water Pure Life</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azka Water — Pure Water Pure Life</title>
 
-  <!-- Google Verification -->
-  <meta name="google-site-verification" content="g6OXbOVgmYKAdCsz5ZB-SHuYXcNACc-ffSzre9BBD_0" />
+<!-- Google Verification -->
+<meta name="google-site-verification" content="g6OXbOVgmYKAdCsz5ZB-SHuYXcNACc-ffSzre9BBD_0" />
 
-  <!-- SEO Tags -->
-  <meta name="description" content="Azka Water provides pure and refreshing bottled water in Gujranwala. Order 19L, 1.5L, and 500ml bottles — pure water, pure life!" />
-  <meta name="keywords" content="Azka Water, water delivery Gujranwala, mineral water, pure drinking water, 19L bottle, 1.5L, 500ml, Azka" />
-  <meta name="author" content="Azka Water" />
+<!-- SEO -->
+<meta name="description" content="Azka Water provides pure and refreshing bottled water in Gujranwala. Order 19L, 1.5L, and 500ml bottles — pure water, pure life!" />
+<meta name="keywords" content="Azka Water, bottled water Gujranwala, 19L bottles, 1.5L bottles, 500ml bottles, water delivery" />
+<meta name="author" content="Azka Water" />
 
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; background-color: #f9fff9; color: #004d00;}
-    header {background-color: #d4f8d4; text-align:center; padding:2rem 1rem;}
-    header h1 {margin:0; font-size:2rem;}
-    header p {font-size:1.2rem; color:#007a33;}
-    nav {text-align:center; margin:1rem 0;}
-    nav a {margin:0 1rem; color:#004d00; text-decoration:none; font-weight:bold; font-size:1rem;}
-    nav a:hover {color:#007a33;}
-    section {padding:1.5rem; text-align:center;}
-    .products {display:grid; gap:1rem; margin-top:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));}
-    .product {border:1px solid #cce5cc; border-radius:10px; padding:1rem; background-color:#f9fff9; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-    .product img {width:100%; border-radius:10px; margin-bottom:10px; transition:transform 0.3s ease; cursor:pointer;}
-    .product img:hover {transform:scale(1.05);}
-    .product h3 {margin:0.5rem 0;}
-    .product p {margin:0.2rem 0; font-weight:bold;}
-    .btn {background-color:#007a33; color:white; padding:0.7rem 1.5rem; border:none; border-radius:5px; font-size:1rem; cursor:pointer; text-decoration:none; display:inline-block; margin-top:0.5rem;}
-    .btn:hover {background-color:#005f26;}
-    footer {background-color:#d4f8d4; text-align:center; padding:1rem; font-size:0.9rem; margin-top:2rem;}
-    iframe {border:0; width:100%; height:300px; border-radius:10px; margin-top:1rem;}
-    .about {text-align:left; max-width:800px; margin:2rem auto; padding:1rem;}
-  </style>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9fff9; color:#004d00;}
+  header {background:#d4f8d4; text-align:center; padding:2rem 1rem;}
+  header h1 {margin:0; font-size:2rem;}
+  header p {margin:0.5rem 0 0; font-size:1.2rem; color:#007a33;}
+
+  nav {display:flex; justify-content:center; gap:2rem; margin-top:1rem; flex-wrap:wrap;}
+  nav a {text-decoration:none; color:#004d00; font-weight:bold; padding:0.5rem 1rem; border-radius:5px;}
+  nav a:hover {background:#cce5cc;}
+
+  section {max-width:1000px; margin:2rem auto; padding:0 1rem;}
+  h2 {text-align:center; margin-bottom:1rem;}
+
+  .products {display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  .product {border:1px solid #cce5cc; border-radius:10px; padding:1rem; background:#f9fff9; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.3s ease;}
+  .product:hover {transform:scale(1.03);}
+  .product img {width:100%; border-radius:10px; margin-bottom:0.8rem; transition:transform 0.3s ease;}
+  .product img:hover {transform:scale(1.05);}
+  .product h3 {margin:0.5rem 0;}
+  .product p {margin:0.3rem 0; font-weight:bold;}
+
+  .btn {background:#007a33; color:white; padding:0.7rem 1.5rem; border:none; border-radius:5px; font-size:1rem; cursor:pointer; text-decoration:none; display:inline-block; margin-top:0.5rem;}
+  .btn:hover {background:#005f26;}
+
+  .about-box, .location-box {border:1px solid #cce5cc; border-radius:10px; padding:1rem 1.2rem; background:#f9fff9; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-top:1rem; text-align:left; line-height:1.5; font-size:1rem;}
+
+  footer {background:#d4f8d4; text-align:center; padding:1rem; font-size:0.9rem; margin-top:2rem;}
+</style>
 </head>
 <body>
 
@@ -44,7 +51,7 @@
     <a href="#home">Home</a>
     <a href="#products">Products</a>
     <a href="#location">Location</a>
-    <a href="#about">About Us</a>
+    <a href="#aboutUs">About Us</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -53,48 +60,58 @@
   <h2>Our Products</h2>
   <div class="products">
     <div class="product">
-      <img src="IMG-20251001-WA0013.jpg" alt="19L Bottle">
+      <img src="IMG-20251001-WA0013.jpg" alt="19L Water Dispenser Bottle">
       <h3>19L Water Dispenser Bottle</h3>
       <p>Price: PKR 1,500</p>
-      <a href="https://azkawaterpk.github.io/azkawater/order.html?product=19L%20Water%20Dispenser%20Bottle&price=1500" class="btn">Buy Now</a>
+      <a href="order.html?product=19L%20Water%20Dispenser%20Bottle&price=1500" class="btn">Buy Now</a>
     </div>
 
     <div class="product">
-      <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottle">
+      <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottles (6 pcs)">
       <h3>1.5L Bottles (6 pcs)</h3>
       <p>Price: PKR 360</p>
-      <a href="https://azkawaterpk.github.io/azkawater/order.html?product=1.5L%20Bottles%20(6%20pcs)&price=360" class="btn">Buy Now</a>
+      <a href="order.html?product=1.5L%20Bottles%20(6%20pcs)&price=360" class="btn">Buy Now</a>
     </div>
 
     <div class="product">
-      <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottle">
+      <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottles (12 pcs)">
       <h3>500ml Bottles (12 pcs)</h3>
       <p>Price: PKR 360</p>
-      <a href="https://azkawaterpk.github.io/azkawater/order.html?product=500ml%20Bottles%20(12%20pcs)&price=360" class="btn">Buy Now</a>
+      <a href="order.html?product=500ml%20Bottles%20(12%20pcs)&price=360" class="btn">Buy Now</a>
     </div>
 
     <div class="product">
       <h3>330ml Bottles</h3>
-      <p>Coming Soon!</p>
+      <p>Coming soon!</p>
     </div>
   </div>
 </section>
 
 <section id="location">
   <h2>Our Location</h2>
-  <iframe src="https://www.google.com/maps?q=DC+Road,+Civil+Lines,+Gujranwala&output=embed"></iframe>
+  <div class="location-box">
+    <p>📍 DC Road, Civil Lines, Gujranwala</p>
+    <iframe src="https://www.google.com/maps?q=DC%20Road,%20Civil%20Lines,%20Gujranwala&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 </section>
 
-<section id="about" class="about">
+<section id="aboutUs">
   <h2>About Us</h2>
-  <p>Azka Water provides premium quality bottled water in Gujranwala. We specialize in delivering 19L, 1.5L, and 500ml bottles for homes and offices. Our mission is to ensure pure and refreshing water reaches you safely and conveniently. Customer satisfaction is our top priority.</p>
+  <div class="about-box">
+    <p>
+      Azka Water — أزكى واٹر is dedicated to providing pure, refreshing, and high-quality bottled water in Gujranwala.
+      Our range includes 19L Water Dispenser Bottles, 1.5L bottles (6 pcs), and 500ml bottles (12 pcs). 
+      We are committed to delivering water that ensures health, hydration, and satisfaction for every customer.
+    </p>
+  </div>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>📍 DC Road, Civil Lines, Gujranwala</p>
-  <p>📞 +92 302 1607004 | +92 300 9645627 | +92 300 8640032</p>
-  <a href="tel:+923021607004" class="btn">Call Now</a>
+  <div class="about-box">
+    <p>📞 Call Now: <a href="tel:+923021607004">+92 302 1607004</a></p>
+    <p>📞 Other Numbers: +92 300 9645627 | +92 300 8640032</p>
+  </div>
 </section>
 
 <footer>
