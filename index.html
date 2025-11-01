@@ -1,192 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>أزكى واٹر | Azka Water — Pure Water — Pure Life</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أزكى واٹر | Azka Water — Pure Water Pure Life</title>
 
 <!-- Google Verification -->
 <meta name="google-site-verification" content="g6OXbOVgmYKAdCsz5ZB-SHuYXcNACc-ffSzre9BBD_0" />
 
-<!-- SEO Tags -->
-<meta name="description" content="Azka Water provides pure and refreshing bottled water in Gujranwala. Order 19L, 1.5L, 500ml, and 330ml bottles — pure water, pure life!" />
-<meta name="keywords" content="Azka Water, bottled water Gujranwala, pure water, 19L bottle, 1.5L bottles, 500ml bottles, water delivery" />
+<!-- SEO -->
+<meta name="description" content="Azka Water provides pure and refreshing bottled water in Gujranwala. Order 19L, 1.5L, 500ml and 330ml bottles — pure water, pure life!" />
+<meta name="keywords" content="Azka Water, bottled water Gujranwala, mineral water, 19L bottle, 1.5L, 500ml, pure water" />
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+<!-- Styles -->
 <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: #ffffff;
-    color: #004d00;
-    scroll-behavior: smooth;
-  }
-
-  /* Sticky Navbar */
-  nav {
-    position: sticky;
-    top: 0;
-    background-color: #006400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    flex-wrap: wrap;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0.5rem 1rem;
-    font-weight: 500;
-    transition: transform 0.2s, color 0.2s;
-    white-space: nowrap;
-  }
-  nav a:hover {
-    transform: scale(1.05);
-    color: #a0ff9e;
-  }
-
-  header {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  header h2 {
-    margin: 0.3rem 0 0;
-    font-size: 1.2rem;
-    color: #28a745; /* Greenish, distinguishable */
-  }
-
-  section {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  /* Products Grid */
-  .products {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .product {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    background: linear-gradient(145deg, #f9fff9, #e0ffe0);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding-top: 1rem;
-  }
-  .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  }
-
-  .product img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-  }
-
-  /* Price Badge */
-  .price-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #007a33;
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-
-  /* Status Badge */
-  .status-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: white;
-  }
-  .in-stock {
-    background-color: #28a745;
-  }
-  .coming-soon {
-    background-color: #dc3545;
-  }
-
-  .product h3 {
-    margin: 0.5rem 0 0;
-  }
-
-  .btn-buy {
-    margin: 1rem;
-    background-color: #007a33;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .btn-buy:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #004d00;
-  }
-
-  /* Info Boxes for Location, About, Contact */
-  .info-box {
-    max-width: 800px;
-    margin: 1.5rem auto;
-    padding: 1.5rem;
-    background-color: #f0fff0;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: left;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .info-box.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Footer */
-  footer {
-    background-color: #d4f8d4;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-  footer a {
-    color: #004d00;
-    text-decoration: none;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #004d00;
+  scroll-behavior: smooth;
+}
+header {
+  background-color: #d4f8d4;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #006600;
+}
+header p {
+  font-size: 1.2rem;
+  color: #009933;
+  margin-top: 5px;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #006600;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  transform: scale(1.05);
+  text-shadow: 1px 1px 2px #000;
+}
+section {
+  padding: 2rem 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.product {
+  border-radius: 10px;
+  padding: 1rem;
+  background: linear-gradient(145deg, #f0fff0, #e6ffe6);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.badge-price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007a33;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.badge-stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+.in-stock {
+  background-color: #28a745;
+}
+.coming-soon {
+  background-color: #dc3545;
+}
+.btn-buy {
+  background-color: #009933;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+.btn-buy:hover {
+  background-color: #007a33;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin: 1rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.about-box {
+  background: linear-gradient(135deg, #f0fff0, #e6ffe6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.contact-box {
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: left;
+}
+.contact-box a {
+  display: block;
+  margin: 0.5rem 0;
+  color: #004d00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.contact-box a:hover {
+  color: #009933;
+}
+footer {
+  background-color: #d4f8d4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
 </style>
 </head>
 <body>
+
+<header>
+  <h1>أزكى واٹر | Azka Water</h1>
+  <p>Pure Water — Pure Life</p>
+</header>
 
 <nav>
   <a href="#home">Home</a>
@@ -196,94 +191,84 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<header id="home">
-  <h1>أزكى واٹر | Azka Water</h1>
-  <h2>Pure Water — Pure Life</h2>
-</header>
+<section id="home" class="visible">
+  <!-- Optional hero or welcome section -->
+</section>
 
-<!-- Products Section -->
 <section id="products">
   <h2>Our Products</h2>
   <div class="products">
     <div class="product">
-      <span class="status-badge in-stock">In Stock</span>
-      <span class="price-badge">PKR 1,500</span>
-      <img src="IMG-20251001-WA0013.jpg" alt="19L Water Dispenser Bottle">
+      <div class="badge-stock in-stock">In Stock</div>
+      <div class="badge-price">PKR 1,500</div>
+      <img src="IMG-20251001-WA0013.jpg" alt="19L Bottle">
       <h3>19L Water Dispenser Bottle</h3>
-      <a href="order.html?product=19L%20Water%20Dispenser%20Bottle&price=1500" class="btn-buy">Buy Now</a>
+      <a href="order.html?product=19L Water Dispenser Bottle&price=1500" class="btn-buy">Buy Now</a>
     </div>
-
     <div class="product">
-      <span class="status-badge in-stock">In Stock</span>
-      <span class="price-badge">PKR 360</span>
-      <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottles (6 pcs)">
+      <div class="badge-stock in-stock">In Stock</div>
+      <div class="badge-price">PKR 360</div>
+      <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottle">
       <h3>1.5L Bottles (6 pcs)</h3>
-      <a href="order.html?product=1.5L%20Bottles&price=360" class="btn-buy">Buy Now</a>
+      <a href="order.html?product=1.5L Bottle&price=360" class="btn-buy">Buy Now</a>
     </div>
-
     <div class="product">
-      <span class="status-badge in-stock">In Stock</span>
-      <span class="price-badge">PKR 360</span>
-      <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottles (12 pcs)">
+      <div class="badge-stock in-stock">In Stock</div>
+      <div class="badge-price">PKR 360</div>
+      <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottle">
       <h3>500ml Bottles (12 pcs)</h3>
-      <a href="order.html?product=500ml%20Bottles&price=360" class="btn-buy">Buy Now</a>
+      <a href="order.html?product=500ml Bottle&price=360" class="btn-buy">Buy Now</a>
     </div>
-
     <div class="product">
-      <span class="status-badge coming-soon">Coming Soon</span>
-      <span class="price-badge">-</span>
-      <img src="placeholder330ml.jpg" alt="330ml Bottles">
+      <div class="badge-stock coming-soon">Coming Soon</div>
+      <div class="badge-price">PKR TBD</div>
+      <img src="" alt="330ml Bottle">
       <h3>330ml Bottles</h3>
-      <a href="#" class="btn-buy">Buy Now</a>
+      <a class="btn-buy">Buy Now</a>
     </div>
   </div>
 </section>
 
-<!-- Location Section -->
 <section id="location">
   <h2>Our Location</h2>
-  <div class="info-box visible">
-    <iframe src="https://maps.google.com/maps?q=DC%20Road%2C%20Civil%20Lines%2C%20Gujranwala&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <br>
-    <a href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank" class="btn-buy">Get Directions</a>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.123456789!2d74.185817!3d32.159541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f3a123456789%3A0xabcdef123456!2sDC%20Road%2C%20Civil%20Lines%2C%20Gujranwala!5e0!3m2!1sen!2s!4v1698721234567" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
+  <a href="https://maps.google.com/?q=DC+Road,+Civil+Lines,+Gujranwala" target="_blank" class="btn-buy" style="margin-top:10px;">Get Directions</a>
 </section>
 
-<!-- About Us Section -->
 <section id="about">
   <h2>About Us</h2>
-  <div class="info-box visible">
-    <p>Azka Water is dedicated to providing pure, fresh, and high-quality bottled water to the people of Gujranwala. We offer 19L, 1.5L, 500ml, and soon 330ml bottles. Our mission is to ensure everyone has access to clean, refreshing water for a healthier life.</p>
+  <div class="about-box">
+    <p>Azka Water is committed to providing pure and refreshing drinking water to homes and offices in Gujranwala. Our products are carefully sourced, hygienically packaged, and delivered promptly to ensure the highest quality. Customer satisfaction and health are our top priorities.</p>
   </div>
 </section>
 
-<!-- Contact Section -->
 <section id="contact">
   <h2>Contact Us</h2>
-  <div class="info-box visible">
-    <p><strong>Call Now:</strong> <a href="tel:+923021607004">+92 302 1607004</a></p>
-    <p><strong>Other Numbers:</strong></p>
-    <p><a href="tel:+923009645627">+92 300 9645627</a></p>
-    <p><a href="tel:+923008640032">+92 300 8640032</a></p>
-    <p><a href="https://wa.me/923021607004" target="_blank" class="btn-buy">Chat on WhatsApp</a></p>
+  <div class="contact-box">
+    <a href="tel:+923021607004">📞 +92 302 1607004</a>
+    <a href="tel:+923009645627">📞 +92 300 9645627</a>
+    <a href="tel:+923008640032">📞 +92 300 8640032</a>
+    <a href="https://wa.me/923021607004" target="_blank" style="color:#009933;">💬 WhatsApp</a>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Azka Water | DC Road, Civil Lines, Gujranwala</p>
+  <p>© 2025 Azka Water. All rights reserved.</p>
 </footer>
 
+<!-- Scroll Animation Script -->
 <script>
-  // Fade-in effect on scroll
-  const boxes = document.querySelectorAll('.info-box');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {threshold: 0.2});
-  boxes.forEach(box => observer.observe(box));
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) {
+      section.classList.add('visible');
+    }
+  });
+});
 </script>
 
 </body>
