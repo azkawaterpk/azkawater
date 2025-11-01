@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azka Water Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: #d4f8d4;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #007a33;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #007a33;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f26;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Order Your Water</h2>
+    <form id="orderForm">
+      <label for="product">Product</label>
+      <select id="product" required>
+        <option value="19L Water Dispenser Bottle">19L Water Dispenser Bottle</option>
+        <option value="1.5L Bottles (6 pcs)">1.5L Bottles (6 pcs)</option>
+        <option value="500ml Bottles (12 pcs)">500ml Bottles (12 pcs)</option>
+      </select>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" min="1" required />
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" placeholder="+92xxxxxxxxxx" required />
+
+      <label for="address">Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const product = encodeURIComponent(document.getElementById('product').value);
+      const quantity = encodeURIComponent(document.getElementById('quantity').value);
+      const name = encodeURIComponent(document.getElementById('name').value);
+      const mobile = encodeURIComponent(document.getElementById('mobile').value);
+      const address = encodeURIComponent(document.getElementById('address').value);
+
+      const message = `Order Details:\nProduct: ${product}\nQuantity: ${quantity}\nName: ${name}\nMobile: ${mobile}\nAddress: ${address}`;
+      const whatsappURL = `https://wa.me/923021607004?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+</html>
