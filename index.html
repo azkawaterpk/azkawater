@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
-    /* General Styles */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -35,16 +34,18 @@
       background-color: #006622;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
+      gap: 1rem;
+      padding: 0.8rem 0;
       z-index: 1000;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      padding: 0.5rem 0.8rem;
       transition: transform 0.3s, color 0.3s;
     }
 
@@ -55,13 +56,14 @@
 
     header {
       text-align: center;
-      padding: 3rem 1rem 2rem 1rem;
+      padding: 2.5rem 1rem 2rem 1rem;
       background: linear-gradient(to right, #d4f8d4, #ffffff);
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin: 0;
+      white-space: nowrap; /* try to keep in one line */
     }
 
     header p {
@@ -259,63 +261,4 @@
         <span class="price-badge">PKR 1,500</span>
         <span class="stock-label stock-available">In Stock</span>
         <img src="IMG-20251001-WA0013.jpg" alt="19L Water Dispenser Bottle">
-        <h3>19L Water Dispenser Bottle</h3>
-        <a href="order.html?product=19L Water Dispenser Bottle&price=1500" class="buy-btn">Buy Now</a>
-      </div>
-
-      <div class="product animate__animated animate__fadeInUp">
-        <span class="price-badge">PKR 360</span>
-        <span class="stock-label stock-available">In Stock</span>
-        <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottles (6 pcs)">
-        <h3>1.5L Bottles (6 pcs)</h3>
-        <a href="order.html?product=1.5L Bottles&price=360" class="buy-btn">Buy Now</a>
-      </div>
-
-      <div class="product animate__animated animate__fadeInUp">
-        <span class="price-badge">PKR 360</span>
-        <span class="stock-label stock-available">In Stock</span>
-        <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottles (12 pcs)">
-        <h3>500ml Bottles (12 pcs)</h3>
-        <a href="order.html?product=500ml Bottles&price=360" class="buy-btn">Buy Now</a>
-      </div>
-
-      <div class="product animate__animated animate__fadeInUp">
-        <span class="price-badge">PKR 0</span>
-        <span class="stock-label stock-coming">Coming Soon</span>
-        <img src="" alt="330ml Bottles">
-        <h3>330ml Bottles</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location Section -->
-  <section class="location-section" id="location">
-    <h2 class="animate__animated animate__fadeIn">Our Location</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2727.2070580049736!2d74.18382331593021!3d32.17637448099296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f2fb9b0f4c0ff%3A0xa2a98de64840e79d!2sDC%20Road%2C%20Civil%20Lines%2C%20Gujranwala!5e0!3m2!1sen!2s!4v1709593480000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
-    <a href="https://www.google.com/maps/dir/?api=1&destination=DC+Road,+Civil+Lines,+Gujranwala" target="_blank" class="map-btn">Get Directions</a>
-  </section>
-
-  <!-- About Us Section -->
-  <section class="about-section" id="about">
-    <div class="about-box animate__animated animate__fadeIn">
-      <h2>About Us</h2>
-      <p>أزكى واٹر | Azka Water is committed to delivering pure, high-quality drinking water in Gujranwala. We prioritize hygiene, prompt delivery, and customer satisfaction, ensuring every bottle meets premium standards.</p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
-    <h2 class="animate__animated animate__fadeIn">Contact Us</h2>
-    <a href="tel:+923021607004" class="contact-btn">Call Now</a>
-    <a href="https://wa.me/923021607004" target="_blank" class="contact-btn">WhatsApp</a>
-    <a href="tel:+923009645627" class="contact-btn">Call +92 300 9645627</a>
-    <a href="tel:+923008640032" class="contact-btn">Call +92 300 8640032</a>
-  </section>
-
-  <footer>
-    <p>📍 DC Road, Civil Lines, Gujranwala</p>
-    <p>© 2025 أزكى واٹر | Azka Water. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+        <h3>19L Water
