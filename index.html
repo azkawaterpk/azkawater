@@ -111,48 +111,6 @@
   </div>
 </section>
 
-<script>
-  // Smooth scroll and fix nav links
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.get
-      <section id="products" class="fade-up">
-  <h2 class="section-title">Our Products</h2>
-  <div class="products">
-    <!-- 19L Bottle -->
-    <div class="product fade-up">
-      <span class="badge in-stock">In Stock</span>
-      <span class="badge price">PKR 1,500</span>
-      <img src="IMG-20251001-WA0013.jpg" alt="19L Water Dispenser Bottle">
-      <h3>19L Water Dispenser Bottle</h3>
-      <a href="order.html?product=19L%20Water%20Dispenser%20Bottle&price=1500" class="btn-buy">Buy Now</a>
-    </div>
-    <!-- 1.5L Bottle -->
-    <div class="product fade-up">
-      <span class="badge in-stock">In Stock</span>
-      <span class="badge price">PKR 360</span>
-      <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottles">
-      <h3>1.5L Bottles (6 pcs)</h3>
-      <a href="order.html?product=1.5L%20Bottles%20(6%20pcs)&price=360" class="btn-buy">Buy Now</a>
-    </div>
-    <!-- 500ml Bottle -->
-    <div class="product fade-up">
-      <span class="badge in-stock">In Stock</span>
-      <span class="badge price">PKR 360</span>
-      <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottles">
-      <h3>500ml Bottles (12 pcs)</h3>
-      <a href="order.html?product=500ml%20Bottles%20(12%20pcs)&price=360" class="btn-buy">Buy Now</a>
-    </div>
-    <!-- 330ml Bottle -->
-    <div class="product fade-up">
-      <span class="badge coming-soon">Coming Soon</span>
-      <span class="badge price">PKR 0</span>
-      <h3>330ml Bottles</h3>
-    </div>
-  </div>
-</section>
-
 <section id="location" class="fade-up">
   <h2 class="section-title">Our Location</h2>
   <div class="location">
@@ -184,17 +142,13 @@
 
 <script>
   // Smooth scroll for nav links
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      if(targetId === "home") {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        const target = document.getElementById(targetId);
-        if(target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+      const targetID = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetID);
+      if(targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
