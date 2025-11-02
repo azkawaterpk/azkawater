@@ -16,7 +16,7 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; }
-    
+
     header { background-color: #d4f8d4; text-align: center; padding: 1.5rem 1rem; position: relative; z-index: 10; }
     header h1 { font-size: 2rem; color: #006400; }
     header p { font-size: 1.2rem; color: #009933; margin-top: 0.5rem; }
@@ -27,8 +27,8 @@
 
     section { padding: 2rem 1rem; max-width: 1200px; margin: auto; }
 
-    .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; }
-    .product { border-radius: 10px; background: #ffffff; padding: 1rem; text-align: center; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; background-color: #ffffff; padding:1rem; border-radius:10px; }
+    .product { border-radius: 10px; background: linear-gradient(145deg, #f9fff9, #e0f9e0); padding: 1rem; text-align: center; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .product:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
     .product img { width: 100%; max-width: 250px; border-radius: 10px; margin-bottom: 10px; }
     .badge { position: absolute; top: 10px; padding: 0.3rem 0.6rem; border-radius: 5px; font-weight: bold; color: #fff; font-size: 0.9rem; }
@@ -41,31 +41,24 @@
 
     .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem; }
 
-    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    /* Location & Map */
+    .location iframe { width: 100%; height: 500px; border: none; border-radius: 10px; margin-bottom: 1rem; }
+    .btn-map { background-color: #007a33; color: #fff; padding: 0.7rem 1.2rem; border-radius: 5px; text-decoration: none; display: inline-block; font-weight:bold; transition: all 0.3s ease; }
+    .btn-map:hover { background-color: #005f26; transform: scale(1.05); }
 
+    /* About Us */
     .about-box { background: #e6ffe6; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: justify; }
 
+    /* Contact */
     .contact-box { display: flex; flex-direction: column; align-items: flex-start; background: #d4f8d4; padding: 1rem; border-radius: 10px; max-width: 400px; margin: auto; margin-top: 1rem; }
-    .contact-box a { color: #004d00; text-decoration: none; margin: 0.3rem 0; font-weight: bold; display: flex; align-items: center; }
-    .contact-box a i { margin-right: 0.5rem; }
+    .contact-box a { color: #004d00; text-decoration: none; margin: 0.5rem 0; font-weight: bold; display:flex; align-items:center; gap:0.5rem; }
+    .contact-box a i { font-style: normal; } /* for icons placeholder */
+    .contact-box a:hover { text-decoration: underline; }
 
-    .location iframe { width: 100%; max-width: 100%; height: 500px; border: none; border-radius: 10px; margin-bottom: 1rem; }
-    .btn-map { background-color: #007a33; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
-    .btn-map:hover { background-color: #005f26; transform: scale(1.05); }
+    /* Fade animation */
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const links = document.querySelectorAll("nav a");
-      links.forEach(link => {
-        link.addEventListener("click", function(e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          target.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-    });
-  </script>
 </head>
 <body>
 
@@ -85,6 +78,7 @@
 <section id="home" class="fade-up">
   <h2 class="section-title">Our Products</h2>
   <div class="products">
+    <!-- 19L Bottle -->
     <div class="product fade-up">
       <span class="badge in-stock">In Stock</span>
       <span class="badge price">PKR 1,500</span>
@@ -92,7 +86,7 @@
       <h3>19L Water Dispenser Bottle</h3>
       <a href="order.html?product=19L%20Water%20Dispenser%20Bottle&price=1500" class="btn-buy">Buy Now</a>
     </div>
-
+    <!-- 1.5L Bottle -->
     <div class="product fade-up">
       <span class="badge in-stock">In Stock</span>
       <span class="badge price">PKR 360</span>
@@ -100,7 +94,7 @@
       <h3>1.5L Bottles (6 pcs)</h3>
       <a href="order.html?product=1.5L%20Bottles%20(6%20pcs)&price=360" class="btn-buy">Buy Now</a>
     </div>
-
+    <!-- 500ml Bottle -->
     <div class="product fade-up">
       <span class="badge in-stock">In Stock</span>
       <span class="badge price">PKR 360</span>
@@ -108,7 +102,7 @@
       <h3>500ml Bottles (12 pcs)</h3>
       <a href="order.html?product=500ml%20Bottles%20(12%20pcs)&price=360" class="btn-buy">Buy Now</a>
     </div>
-
+    <!-- 330ml Bottle -->
     <div class="product fade-up">
       <span class="badge coming-soon">Coming Soon</span>
       <span class="badge price">PKR 0</span>
@@ -128,9 +122,9 @@
   <h2 class="section-title">About Us</h2>
   <div class="about-box">
     <p>
-      At <strong>أزكى واٹر | Azka Water</strong>, we are committed to providing the purest and most refreshing water in Gujranwala.
-      Our bottles are carefully sourced and sanitized to ensure the highest quality for our customers.
-      From 19L dispensers to convenient 500ml bottles, we aim to meet all your hydration needs.
+      At أزكى واٹر | Azka Water, our mission is simple: deliver crisp, refreshing water that keeps you healthy and hydrated.
+      Each bottle, from the large 19L dispenser to the handy 500ml bottles, is carefully sourced, sanitized, and delivered with care.
+      We take pride in quality and consistency so every sip is pure satisfaction.
     </p>
   </div>
 </section>
@@ -138,12 +132,24 @@
 <section id="contact" class="fade-up">
   <h2 class="section-title">Contact Us</h2>
   <div class="contact-box">
-    <a href="tel:+923021607004">📞 0302-1607004</a>
-    <a href="tel:+923009645627">📞 0300-9645627</a>
-    <a href="tel:+923008640032">📞 0300-8640032</a>
+    <a href="tel:+923021607004"><i>📞</i>0302 1607004</a>
+    <a href="tel:+923009645627"><i>📞</i>0300 9645627</a>
+    <a href="tel:+923008640032"><i>📞</i>0300 8640032</a>
     <a href="https://wa.me/923021607004" target="_blank" class="btn-buy" style="margin-top:0.5rem;">WhatsApp Us</a>
   </div>
 </section>
+
+<script>
+  // Smooth scroll for nav links
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
 
 </body>
 </html>
