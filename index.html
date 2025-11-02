@@ -16,23 +16,22 @@
   <!-- CSS -->
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; }
 
     header { background-color: #d4f8d4; text-align: center; padding: 1.5rem 1rem; position: relative; z-index: 10; }
-    header h1 { font-size: 2rem; color: #006400; letter-spacing: 0.5px; }
-    header p { font-size: 1.2rem; color: #009933; margin-top: 0.5rem; font-style: italic; }
+    header h1 { font-size: 2rem; color: #006400; }
+    header p { font-size: 1.2rem; color: #009933; margin-top: 0.5rem; }
 
     nav { background-color: #006400; display: flex; justify-content: center; flex-wrap: wrap; padding: 0.5rem 0; position: sticky; top: 0; z-index: 100; }
-    nav a { color: #fff; text-decoration: none; padding: 0.7rem 1.2rem; margin: 0 0.3rem; border-radius: 5px; transition: all 0.3s ease; font-weight: bold; white-space: nowrap; }
+    nav a { color: #fff; text-decoration: none; padding: 0.7rem 1.2rem; margin: 0 0.3rem; border-radius: 5px; transition: all 0.3s ease; font-weight: bold; }
     nav a:hover { background-color: #004d00; transform: scale(1.05); }
 
     section { padding: 2rem 1rem; max-width: 1200px; margin: auto; }
 
     .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; }
-    .product { border-radius: 10px; background: linear-gradient(145deg, #ffffff, #e6ffe6); padding: 1rem; text-align: center; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .product:hover { transform: translateY(-5px); box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
-    .product img { width: 100%; max-width: 250px; border-radius: 10px; margin-bottom: 10px; }
-
+    .product { border-radius: 10px; background: linear-gradient(145deg, #f0fff0, #d4f8d4); padding: 1rem; text-align: center; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .product:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+    .product img { width: 100%; max-width: 250px; border-radius: 10px; margin-bottom: 10px; background-color: #fff; }
     .badge { position: absolute; top: 10px; padding: 0.3rem 0.6rem; border-radius: 5px; font-weight: bold; color: #fff; font-size: 0.9rem; }
     .in-stock { left: 10px; background-color: #28a745; }
     .coming-soon { left: 10px; background-color: #dc3545; }
@@ -41,15 +40,11 @@
     .btn-buy { background-color: #007a33; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 0.5rem; transition: all 0.3s ease; }
     .btn-buy:hover { background-color: #005f26; transform: scale(1.05); }
 
-    .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem; color: #004d00; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+    .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem; }
 
     /* Fade animation */
     .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-    /* Smooth Scroll Offset Fix */
-    html { scroll-padding-top: 70px; }
-
   </style>
 </head>
 <body>
@@ -105,19 +100,18 @@
 <section id="location" class="fade-up">
   <h2 class="section-title">Our Location</h2>
   <div class="location">
-    <iframe src="https://www.google.com/maps?q=32.1882,74.1815&hl=es;z=14&output=embed" allowfullscreen style="width:100%; height:500px; border:none; border-radius:10px; margin-bottom:1rem;"></iframe>
-    <a href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank" class="btn-buy" style="display:inline-block;">Get Directions</a>
+    <iframe src="https://www.google.com/maps?q=32.1882,74.1815&hl=es;z=14&output=embed" allowfullscreen style="width:100%; height:500px; border:none; border-radius:10px;"></iframe>
+    <a href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank" class="btn-buy" style="display:inline-block; margin-top:10px;">Get Directions</a>
   </div>
 </section>
 
 <section id="about" class="fade-up">
   <h2 class="section-title">About Us</h2>
-  <div class="about-box">
+  <div class="about-box" style="background:#e6ffe6; padding:1.5rem; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); text-align:justify;">
     <p>
       At أزكى واٹر | Azka Water, we are committed to providing the purest and most refreshing water in Gujranwala.
       Our bottles are carefully sourced and sanitized to ensure the highest quality for our customers.
       From 19L dispensers to convenient 500ml bottles, we aim to meet all your hydration needs.
-      Customer satisfaction and trust are the foundation of our service.
     </p>
   </div>
 </section>
@@ -132,13 +126,14 @@
   </div>
 </section>
 
+<!-- Smooth Scroll -->
 <script>
-  // Smooth scroll for nav links
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+  const links = document.querySelectorAll('nav a');
+  links.forEach(link => {
+    link.addEventListener('click', function(e){
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({behavior:'smooth'});
     });
   });
 </script>
