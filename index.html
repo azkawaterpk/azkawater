@@ -1,297 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azka Water — Pure Water Pure Life</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDMI Store</title>
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" href="apple-touch-icon.png" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="https://github.com/azkawaterpk/azkawater/blob/main/apple-touch-icon.png" type="image/png">
 
-  <!-- ✅ SEO -->
-  <meta name="description" content="Azka Water — Premium bottled water in Gujranwala. Order 19L Dispenser, 1.5L, and 500ml bottles. Pure Water, Pure Life!" />
-  <meta name="keywords" content="Azka Water, Water Delivery Gujranwala, Pure Drinking Water, Mineral Water, 19L, 1.5L, 500ml" />
-  <meta name="author" content="Azka Water" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: "Poppins", Arial, sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: #004d00;
-      scroll-behavior: smooth;
-    }
+    <!-- Stylesheet -->
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-    /* ✅ Sticky Navbar */
-    nav {
-      background-color: #004d00;
-      color: white;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap;
-    }
+        body {
+            background: #f5f6fa;
+            color: #2f3640;
+            line-height: 1.6;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    nav a:hover {
-      text-shadow: 0 0 10px #aaffaa;
-    }
+        /* Header */
+        header {
+            background: #1e272e;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: linear-gradient(to bottom right, #d4f8d4, #f0fff0);
-    }
+        header nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
 
-    header img {
-      width: 130px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
+        header nav ul li {
+            margin-left: 2rem;
+        }
 
-    header h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
-      color: #007a33;
-    }
+        header nav ul li a {
+            color: #f5f6fa;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
 
-    header h2 {
-      font-size: 1.3rem;
-      color: #005a26;
-      margin-bottom: 1rem;
-    }
+        header nav ul li a:hover {
+            color: #00a8ff;
+        }
 
-    section {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    h2.section-title {
-      font-size: 1.8rem;
-      color: #007a33;
-      margin-bottom: 1rem;
-    }
+        #home {
+            text-align: center;
+            background: #00a8ff;
+            color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
+        }
 
-    /* ✅ Products Section */
-    .products {
-      display: grid;
-      gap: 1.5rem;
-      justify-content: center;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-    .product {
-      border: 1px solid #cce5cc;
-      border-radius: 12px;
-      padding: 1rem;
-      background: linear-gradient(to bottom right, #f9fff9, #f2fff2);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-    }
+        #home p {
+            font-size: 1.2rem;
+        }
 
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-    }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2f3640;
+        }
 
-    .product img {
-      width: 250px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+        /* Products */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
 
-    .badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #007a33;
-      color: white;
-      padding: 0.4rem 0.7rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
+        .product {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-    .stock {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: #28a745;
-      color: white;
-      padding: 0.4rem 0.7rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: bold;
-    }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
 
-    .coming {
-      background-color: #dc3545 !important;
-    }
+        .product h3 {
+            margin-bottom: 0.5rem;
+            color: #00a8ff;
+        }
 
-    .btn {
-      background-color: #007a33;
-      color: white;
-      padding: 0.6rem 1.3rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      margin-top: 10px;
-      display: inline-block;
-      text-decoration: none;
-    }
+        /* About */
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
 
-    .btn:hover {
-      background-color: #005f26;
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+        /* Contact */
+        #contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
-    /* ✅ About Us Section */
-    .card {
-      max-width: 700px;
-      margin: auto;
-      background-color: #f5fff5;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: justify;
-      line-height: 1.6;
-    }
+        #contact input, #contact textarea {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #dcdde1;
+            font-size: 1rem;
+        }
 
-    /* ✅ Contact Section */
-    .contact-box {
-      display: inline-block;
-      background: #eaffea;
-      padding: 1rem;
-      margin: 0.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
+        #contact button {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: none;
+            background: #00a8ff;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-    .contact-box a {
-      color: #007a33;
-      font-weight: bold;
-      text-decoration: none;
-      display: block;
-    }
+        #contact button:hover {
+            background: #0097e6;
+        }
 
-    footer {
-      background-color: #d4f8d4;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1e272e;
+            color: #f5f6fa;
+            margin-top: 2rem;
+        }
 
-    iframe {
-      border-radius: 10px;
-      border: none;
-      width: 100%;
-      height: 300px;
-    }
-  </style>
+        /* Responsive */
+        @media(max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 1rem 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <!-- ✅ Sticky Navbar -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#location">Location</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- ✅ Header Section -->
-  <header id="home">
-    <img src="https://github.com/azkawaterpk/azkawater/blob/main/Azka%20Water%20-logo.png" alt="Azka Water Logo">
-    <h1><span style="color:#004d00;">Azka Water</span> أزكى واٹر</h1>
-    <h2>Pure Water — Pure Life</h2>
-  </header>
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to HDMI Store</h1>
+        <p>Your one-stop shop for high-quality HDMI products.</p>
+    </section>
 
-  <!-- ✅ Products Section -->
-  <section id="products">
-    <h2 class="section-title">Our Products</h2>
-    <div class="products">
-      <div class="product">
-        <span class="stock">In Stock</span>
-        <span class="badge">PKR 1,500</span>
-        <img src="IMG-20251001-WA0013.jpg" alt="19L Water Dispenser Bottle">
-        <h3>19L Water Dispenser Bottle</h3>
-        <p>Perfect for home and office use.</p>
-        <a href="order.html?product=19L Water Dispenser Bottle&price=1500" class="btn">Buy Now</a>
-      </div>
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <h3>HDMI Cable 1m</h3>
+                <p>High-speed HDMI cable for your devices.</p>
+            </div>
+            <div class="product">
+                <h3>HDMI Adapter</h3>
+                <p>Connect any device with ease.</p>
+            </div>
+            <!-- Add your other products here -->
+        </div>
+    </section>
 
-      <div class="product">
-        <span class="stock">In Stock</span>
-        <span class="badge">PKR 360</span>
-        <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottle">
-        <h3>1.5L Bottles (6 pcs)</h3>
-        <p>Ideal for family and daily use.</p>
-        <a href="order.html?product=1.5L Bottles (6 pcs)&price=360" class="btn">Buy Now</a>
-      </div>
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing top-quality HDMI solutions for your home and office. Our mission is to make sure your devices stay connected with ease and reliability.</p>
+    </section>
 
-      <div class="product">
-        <span class="stock">In Stock</span>
-        <span class="badge">PKR 360</span>
-        <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottle">
-        <h3>500ml Bottles (12 pcs)</h3>
-        <p>Perfect for travel and events.</p>
-        <a href="order.html?product=500ml Bottles (12 pcs)&price=360" class="btn">Buy Now</a>
-      </div>
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-      <div class="product">
-        <span class="stock coming">Coming Soon</span>
-        <span class="badge">N/A</span>
-        <h3>330ml Bottles</h3>
-        <p>Compact, convenient and refreshing.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ Location Section -->
-  <section id="location">
-    <h2 class="section-title">Our Location</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13610.327933493598!2d74.1923638!3d32.1609834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f29b06640e70d%3A0x8df66ed66aee2608!2sAzka%20Water!5e0!3m2!1sen!2s!4v1730480000000!5m2!1sen!2s" allowfullscreen=""></iframe>
-  </section>
-
-  <!-- ✅ About Us Section -->
-  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="card">
-      <p>
-        At Azka Water, we believe that every drop counts. Our mission is to provide the highest quality, crystal-clear drinking water to homes, offices, and institutions across Gujranwala. We are committed to purity, freshness, and customer satisfaction — because your health and trust are our top priorities.
-      </p>
-    </div>
-  </section>
-
-  <!-- ✅ Contact Section -->
-  <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-box">
-      <a href="tel:+923021607004">📞 +92 302 1607004</a>
-      <a href="tel:+923009645627">📞 +92 300 9645627</a>
-      <a href="tel:+923008640032">📞 +92 300 8640032</a>
-    </div>
-    <br>
-    <a href="https://wa.me/923021607004" class="btn">Chat on WhatsApp</a>
-  </section>
-
-  <footer>
-    <p>© 2025 Azka Water — Pure Water Pure Life</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HDMI Store. All rights reserved.</p>
+    </footer>
 </body>
 </html>
