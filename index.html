@@ -61,13 +61,26 @@
       padding: 2rem 1rem;
     }
 
-    header h1 {
-      margin: 0;
+    /* Updated header for English + Urdu name and slogan */
+    .site-title {
       font-size: 2.2rem;
+      font-weight: 600;
       color: #006b2d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    header p {
+    .site-title .urdu {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #006b2d;
+      direction: rtl;
+    }
+
+    .slogan {
       font-size: 1.1rem;
       color: #00994d;
       margin-top: 0.5rem;
@@ -194,8 +207,11 @@
 
   <!-- ✅ Header -->
   <header id="home">
-    <h1>Azka Water — Pure Water Pure Life</h1>
-    <p>Delivering the highest quality purified water across Gujranwala</p>
+    <div class="site-title">
+      <span>Azka Water</span>
+      <span class="urdu">اذکیٰ واٹر</span>
+    </div>
+    <div class="slogan">Pure Water, Pure Life</div>
   </header>
 
   <!-- ✅ Products -->
