@@ -55,39 +55,35 @@
       transform: scale(1.1);
     }
 
-    /* Modern Header */
     header {
-      background: linear-gradient(135deg, #d4f8d4, #b9f6ca);
+      background-color: #d4f8d4;
       text-align: center;
-      padding: 3rem 1rem 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem 1rem;
     }
 
+    /* Updated header for English + Urdu name and slogan */
     .site-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #006b2d;
       display: flex;
       justify-content: center;
-      align-items: baseline;
+      align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: #006b2d;
-      letter-spacing: 1px;
     }
 
-    .urdu {
-      font-size: 2.2rem;
-      direction: rtl;
-      color: #007a33;
+    .site-title .urdu {
+      font-size: 2rem;
       font-weight: 600;
+      color: #006b2d;
+      direction: rtl;
     }
 
     .slogan {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #00994d;
-      margin-top: 0.6rem;
-      font-style: italic;
-      letter-spacing: 0.5px;
+      margin-top: 0.5rem;
     }
 
     section {
@@ -168,23 +164,6 @@
     .btn:hover {
       background-color: #005f26;
       transform: scale(1.05);
-    }
-
-    /* Box style for About and Contact */
-    .info-box {
-      background: #f6fff6;
-      border: 2px solid #b2f2bb;
-      border-radius: 16px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      width: 90%;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .info-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     footer {
@@ -279,15 +258,15 @@
     <a href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" class="btn" target="_blank">Get Directions</a>
   </section>
 
-  <!-- ✅ About Us (Box) -->
-  <section id="about" class="fade-in info-box">
+  <!-- ✅ About Us -->
+  <section id="about" class="fade-in">
     <h2>About Us</h2>
     <p>At Azka Water, we are dedicated to providing pure, refreshing, and hygienically processed bottled water to homes and businesses in Gujranwala. 
     With a strong focus on quality and service, our mission is to ensure everyone enjoys safe and healthy drinking water — every day.</p>
   </section>
 
-  <!-- ✅ Contact (Box) -->
-  <section id="contact" class="fade-in info-box">
+  <!-- ✅ Contact -->
+  <section id="contact" class="fade-in">
     <h2>Contact Us</h2>
     <p>📞 <a href="tel:+923021607004">+92 302 1607004</a></p>
     <p>📞 <a href="tel:+923009645627">+92 300 9645627</a></p>
