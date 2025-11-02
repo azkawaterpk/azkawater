@@ -1,265 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>أزكى واٹر | Azka Water — Pure Water • Pure Life</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://azkawaterpk.github.io/azkawater/apple-touch-icon.png" type="image/png" />
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="g6OXbOVgmYKAdCsz5ZB-SHuYXcNACc-ffSzre9BBD_0" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- SEO -->
+  <meta name="description" content="Azka Water — premium bottled water in Gujranwala. 19L, 1.5L, 500ml available. Call or WhatsApp to order." />
+  <meta name="keywords" content="Azka Water, bottled water, Gujranwala, 19L, 1.5L, 500ml" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --green-dark: #064d14;
-      --green: #0a6b2a;
-      --green-accent: #009944;
-      --background-light: #f7fff7;
-      --card-bg: #f6fff6;
-      --text-dark: #073d08;
-      --max-width: 1200px;
+    :root{
+      --green-900:#064d14;
+      --green-700:#0a6b2a;
+      --accent:#009944;
+      --muted:#eef9ef;
+      --card:#f6fff6;
+      --text:#073d08;
+      --max-width:1100px;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-dark);
-      background: linear-gradient(180deg, #ffffff 0%, var(--background-light) 100%);
-      line-height: 1.5;
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      color:var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, #f7fff7 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
     }
 
-    /* ---------- Navbar ---------- */
-    .navbar-wrap {
-      position: sticky;
-      top: 0;
-      z-index: 1200;
-      background: rgba(6,77,20,0.95);
-      backdrop-filter: blur(4px);
+    /* -------------- NAVBAR -------------- */
+    .navbar-wrap{
+      position:sticky; top:0; z-index:1200;
+      width:100%;
+      background: rgba(6,77,20,0.98); /* dark green */
       box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      backdrop-filter: blur(4px);
+    }
+    .nav-inner{
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      padding:10px 16px;
+      justify-content:space-between;
+      flex-wrap:wrap;
     }
 
-    .nav-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 16px;
-      flex-wrap: wrap;
-      gap: 12px;
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:0;
+    }
+    .brand .logo-box{
+      width:44px; height:44px; border-radius:8px;
+      background:linear-gradient(135deg,var(--accent),var(--green-700));
+      display:grid; place-items:center; color:white; font-weight:700;
+      box-shadow:0 3px 8px rgba(0,0,0,0.18);
+      flex-shrink:0;
+    }
+    .brand .title{
+      color:#fff; font-weight:700; font-size:1rem; white-space:nowrap;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
+    .nav-links{
+      display:flex; gap:8px; align-items:center; justify-content:center;
+      flex:1; padding:8px; min-width:0;
+    }
+    .nav-links a{
+      color:#fff; text-decoration:none; font-weight:600; padding:8px 12px;
+      border-radius:8px; white-space:nowrap; font-size:0.95rem;
+      transition: all .18s ease;
+    }
+    .nav-links a:hover, .nav-links a:focus{
+      background: rgba(255,255,255,0.06);
+      transform:translateY(-2px);
     }
 
-    .brand .logo-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--green-accent), var(--green));
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 700;
-      flex-shrink: 0;
+    /* --------------- HEADER --------------- */
+    header.site-header{
+      max-width:var(--max-width);
+      margin:18px auto 6px;
+      padding:18px 16px;
+      text-align:center;
+    }
+    header .big-title{
+      font-size:1.6rem; margin:0; color:var(--green-900); font-weight:700;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    header .tagline{
+      margin-top:8px; color:var(--accent); font-weight:600;
+      font-size:1rem;
     }
 
-    .brand .title {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-      white-space: nowrap;
+    /* -------------- HERO (optional small) -------------- */
+    .hero{
+      max-width:var(--max-width);
+      margin:12px auto;
+      padding:12px 16px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex: 1;
-      min-width: 0;
-      padding: 6px 0;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 8px;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      background: rgba(255,255,255,0.08);
-      transform: translateY(-2px);
-    }
-
-    /* ---------- Header ---------- */
-    header.site-header {
-      max-width: var(--max-width);
-      margin: 18px auto 6px;
-      padding: 18px 16px;
-      text-align: center;
-    }
-
-    header .big-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--green-dark);
-      white-space: nowrap;
-    }
-
-    header .tagline {
-      margin-top: 8px;
-      color: var(--green-accent);
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    /* ---------- Products ---------- */
+    /* -------------- SECTIONS -------------- */
     .section {
-      max-width: var(--max-width);
-      margin: 24px auto;
-      padding: 16px;
+      max-width:var(--max-width);
+      margin:20px auto;
+      padding:18px 16px;
     }
+    .section h2{ text-align:center; margin:6px 0 16px; color:var(--green-700); font-size:1.4rem; }
 
-    .section h2 {
-      text-align: center;
-      color: var(--green);
-      font-size: 1.5rem;
-      margin-bottom: 18px;
-    }
-
-    .products-grid {
-      display: grid;
+    /* -------------- PRODUCTS GRID -------------- */
+    .products-grid{
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-      gap: 18px;
+      gap:18px;
     }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 12px;
-      position: relative;
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px;
+      position:relative;
       box-shadow: 0 6px 18px rgba(10,80,20,0.06);
       transition: transform .25s ease, box-shadow .25s ease;
-      overflow: hidden;
+      overflow:hidden;
+    }
+    .card:hover{ transform:translateY(-6px); box-shadow: 0 12px 30px rgba(10,80,20,0.10); }
+
+    .card img{
+      width:100%; height:220px; object-fit:cover; border-radius:8px;
+      display:block; margin-bottom:10px;
+      background:#f3f7f3;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(10,80,20,0.1);
+    /* badges */
+    .badge-right{
+      position:absolute; top:12px; right:12px; background:var(--green-700);
+      color:white; padding:6px 9px; border-radius:8px; font-weight:700; font-size:0.92rem;
+      box-shadow:0 4px 10px rgba(0,0,0,0.12);
     }
-
-    .card img {
-      width: 100%;
-      height: auto; /* fully visible images */
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      background: #f3f7f3;
-      display: block;
+    .badge-left{
+      position:absolute; top:12px; left:12px; padding:6px 9px; border-radius:8px; font-weight:700; font-size:0.82rem; color:#fff;
+      box-shadow:0 4px 10px rgba(0,0,0,0.12);
     }
+    .badge-left.instock{ background:#28a745; }
+    .badge-left.soon{ background:#dc3545; }
 
-    .badge-right {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: var(--green);
-      color: white;
-      padding: 6px 9px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
+    .card h3{ margin:6px 0 4px; font-size:1rem; color:var(--green-900); }
+    .card .meta{ font-weight:600; color:#0b4d18; margin-bottom:8px; }
 
-    .badge-left {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      padding: 6px 9px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.82rem;
-      color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
-
-    .badge-left.instock { background: #28a745; }
-    .badge-left.soon { background: #dc3545; }
-
-    .card h3 { margin:6px 0 4px; font-size:1rem; color:var(--green-dark); }
-    .card .meta { font-weight:600; color:#0b4d18; margin-bottom:8px; }
-
-    .card .actions { display:flex; justify-content:center; margin-top:6px; gap:6px; }
-    .btn {
-      background: var(--green-accent);
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
+    .card .actions{ display:flex; gap:8px; align-items:center; justify-content:center; margin-top:6px; }
+    .btn{
+      background:var(--accent); color:white; border:none; padding:10px 14px; border-radius:8px;
+      font-weight:700; cursor:pointer; text-decoration:none; display:inline-block; text-align:center;
       transition: transform .14s ease, box-shadow .14s ease;
     }
+    .btn:hover{ transform:translateY(-4px); box-shadow: 0 8px 22px rgba(0,0,0,0.14); }
 
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    /* -------------- MAP, ABOUT, CONTACT -------------- */
+    .map-frame{ width:100%; height:420px; border:0; border-radius:10px; display:block; }
+
+    .info-box{
+      background:linear-gradient(180deg,#f7fff7,#ffffff);
+      padding:16px; border-radius:10px; box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+      max-width:900px; margin:12px auto; text-align:left;
     }
+    .contact-list{ max-width:360px; margin:8px auto; display:flex; flex-direction:column; gap:8px; }
+    .contact-item{ display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:8px; background:#fff; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+    .contact-item a{ color:var(--text); font-weight:700; text-decoration:none; }
 
-    /* ---------- Location ---------- */
-    .map-frame { width:100%; height:420px; border:0; border-radius:10px; display:block; }
+    .small-cta{ display:inline-block; background:var(--green-700); color:#fff; padding:10px 12px; border-radius:8px; font-weight:700; text-decoration:none; margin-top:8px; }
 
-    /* ---------- Info Boxes ---------- */
-    .info-box {
-      background: linear-gradient(180deg,#f7fff7,#ffffff);
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.05);
-      max-width:900px;
-      margin:12px auto;
-      text-align:left;
-    }
+    /* -------------- FOOTER -------------- */
+    footer{ background: #e6f9e8; padding:14px 16px; text-align:center; color:var(--green-900); font-weight:600; }
 
-    /* ---------- Contact ---------- */
-    .contact-list { max-width:360px; margin:8px auto; display:flex; flex-direction:column; gap:10px; }
-    .contact-item { display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:8px; background:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.04); }
-    .contact-item a { color: var(--text-dark); font-weight:700; text-decoration:none; }
-    .small-cta { display:inline-block; background: var(--green); color:#fff; padding:10px 12px; border-radius:8px; font-weight:700; text-decoration:none; margin-top:8px; text-align:center; }
-
-    /* ---------- Footer ---------- */
-    footer { background: #e6f9e8; padding:14px 16px; text-align:center; color: var(--green-dark); font-weight:600; }
-
-    /* ---------- Responsive ---------- */
+    /* -------------- RESPONSIVE TWEAKS -------------- */
     @media (max-width:640px){
-      .card img { height:auto; }
-      .nav-links { width:100%; justify-content:space-around; padding:6px 0; }
-      .nav-inner { gap:8px; padding:10px; }
+      .card img{ height:170px; }
+      .nav-links{ order:2; width:100%; justify-content:space-around; padding:6px 8px; }
+      .brand{ order:1; }
+      .nav-inner{ gap:8px; padding:10px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar-wrap">
+  <!-- NAVBAR -->
+  <div class="navbar-wrap" aria-hidden="false">
     <div class="nav-inner">
-      <div class="brand">
-        <div class="logo-box">AW</div>
-        <div class="title">أزكى واٹر | Azka Water</div>
+      <div class="brand" style="gap:10px;">
+        <div class="logo-box" aria-hidden="true">AW</div>
+        <div style="min-width:0">
+          <div class="title" style="font-weight:800; font-size:0.98rem; color:#fff;">أزكى واٹر | Azka Water</div>
+        </div>
       </div>
-      <nav class="nav-links">
+
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#products">Products</a>
         <a href="#location">Location</a>
@@ -269,74 +214,166 @@
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="site-header" id="home">
-    <div class="big-title">أزكى واٹر | Azka Water</div>
-    <div class="tagline">Pure Water • Pure Life</div>
+    <div class="big-title" style="font-weight:800">أزكى واٹر | Azka Water</div>
+    <div class="tagline">Pure Water — Pure Life</div>
   </header>
 
-  <!-- Products -->
+  <!-- HERO (keep small, clean) -->
+  <div class="hero" style="max-width:var(--max-width); margin:0 auto; padding:6px 16px; text-align:center;">
+    <!-- optional hero content / small intro -->
+  </div>
+
+  <!-- PRODUCTS -->
   <section id="products" class="section">
     <h2>Our Products</h2>
-    <div class="products-grid">
-      <article class="card">
+
+    <div class="products-grid" aria-live="polite">
+
+      <!-- 19L -->
+      <article class="card" aria-labelledby="p19-title">
         <div class="badge-left instock">In Stock</div>
         <div class="badge-right">PKR 1,500</div>
         <img src="IMG-20251001-WA0013.jpg" alt="19L Water Dispenser Bottle">
-        <h3>19L Water Dispenser Bottle</h3>
+        <h3 id="p19-title">19L Water Dispenser Bottle</h3>
         <div class="meta">19L Dispenser | Price: PKR 1,500</div>
         <div class="actions">
           <a class="btn" href="order.html?product=19L%20Water%20Dispenser%20Bottle&price=1500">Buy Now</a>
         </div>
       </article>
 
-      <article class="card">
+      <!-- 1.5L -->
+      <article class="card" aria-labelledby="p15-title">
         <div class="badge-left instock">In Stock</div>
         <div class="badge-right">PKR 360</div>
         <img src="IMG-20251001-WA0012.jpg" alt="1.5L Bottles (6 pcs)">
-        <h3>1.5L Bottles (6 pcs)</h3>
+        <h3 id="p15-title">1.5L Bottles (6 pcs)</h3>
         <div class="meta">6-pack | Price: PKR 360</div>
         <div class="actions">
           <a class="btn" href="order.html?product=1.5L%20Bottles%20(6%20pcs)&price=360">Buy Now</a>
         </div>
       </article>
 
-      <article class="card">
+      <!-- 500ml -->
+      <article class="card" aria-labelledby="p500-title">
         <div class="badge-left instock">In Stock</div>
         <div class="badge-right">PKR 360</div>
         <img src="IMG-20251001-WA0012.jpg" alt="500ml Bottles (12 pcs)">
-        <h3>500ml Bottles (12 pcs)</h3>
+        <h3 id="p500-title">500ml Bottles (12 pcs)</h3>
         <div class="meta">12-pack | Price: PKR 360</div>
         <div class="actions">
           <a class="btn" href="order.html?product=500ml%20Bottles%20(12%20pcs)&price=360">Buy Now</a>
         </div>
       </article>
 
-      <article class="card">
+      <!-- 330ml coming soon -->
+      <article class="card" aria-labelledby="p330-title">
         <div class="badge-left soon">Coming Soon</div>
         <div class="badge-right">TBD</div>
-        <img src="placeholder330ml.jpg" alt="330ml Bottles">
-        <h3>330ml Bottles</h3>
-        <div class="meta">Coming soon</div>
+        <img src="placeholder330ml.jpg" alt="330ml Bottles (coming soon)">
+        <h3 id="p330-title">330ml Bottles</h3>
+        <div class="meta">Coming soon — stay tuned</div>
         <div class="actions">
-          <a class="btn" href="#" style="opacity:0.8; pointer-events:none;">Notify Me</a>
+          <a class="btn" href="#" aria-disabled="true" style="opacity:.9; pointer-events:auto;">Notify Me</a>
         </div>
       </article>
+
     </div>
   </section>
 
-  <!-- Location -->
-  <section id="location" class="section">
-    <h2>Our Location</h2>
-    <div class="info-box">
-      <iframe class="map-frame" src="https://www.google.com/maps?q=31.4276809,74.3419438&z=15&output=embed" title="Azka Water location" loading="lazy"></iframe>
+  <!-- LOCATION -->
+  <section id="location" class="section" aria-labelledby="loc-title">
+    <h2 id="loc-title">Our Location</h2>
+
+    <div class="info-box" role="region" aria-label="location map">
+      <!-- Large interactive map embed (user's link opens directions) -->
+      <iframe
+        class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2727.2070580049736!2d74.18382331593021!3d32.17637448099296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f2fb9b0f4c0ff%3A0xa2a98de64840e79d!2sDC%20Road%2C%20Civil%20Lines%2C%20Gujranwala!5e0!3m2!1sen!2s!4v1709593480000!5m2!1sen!2s"
+        title="Azka Water location on Google Maps"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
       <div style="text-align:center; margin-top:12px;">
-        <a class="btn" href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank">Get Directions</a>
+        <a class="btn" href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank" rel="noopener">Get Directions</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <h2>About Us</h2>
-    <div class
+    <div class="about-box">
+      <p style="margin:0; font-weight:600;">
+        أزكى واٹر | Azka Water is dedicated to delivering pure, hygienic bottled water across Gujranwala.
+        We provide reliable deliveries, strict quality checks, and friendly customer service — because clean water matters.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
+
+    <div class="info-box">
+      <div class="contact-list">
+        <div class="contact-item">
+          <div style="flex:1">
+            <div style="font-size:0.95rem; color:#006622; font-weight:700;">Call Now</div>
+            <a href="tel:+923021607004">+92 302 1607004</a>
+          </div>
+          <div><a class="small-cta" href="tel:+923021607004">Call</a></div>
+        </div>
+
+        <div class="contact-item">
+          <div style="flex:1">
+            <div style="font-size:0.95rem; color:#006622; font-weight:700;">Other</div>
+            <a href="tel:+923009645627">+92 300 9645627</a>
+          </div>
+          <div><a class="small-cta" href="tel:+923009645627">Call</a></div>
+        </div>
+
+        <div class="contact-item">
+          <div style="flex:1">
+            <div style="font-size:0.95rem; color:#006622; font-weight:700;">Other</div>
+            <a href="tel:+923008640032">+92 300 8640032</a>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <a class="small-cta" href="tel:+923008640032">Call</a>
+            <a class="small-cta" href="https://wa.me/923021607004" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="max-width:var(--max-width); margin:0 auto; padding:6px 12px;">
+      <div>© <span id="year"></span> Azka Water — DC Road, Civil Lines, Gujranwala</div>
+    </div>
+  </footer>
+
+  <!-- JS: animations + Year -->
+  <script>
+    // show current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for fade-up of sections
+    (function(){
+      const sections = document.querySelectorAll('.section');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.14, rootMargin: "0px 0px -50px 0px" });
+      sections.forEach(s => obs.observe(s));
+    })();
+
+    // small accessibility: keyboard focus outline
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Tab') document.body.classList.add('user-is-tabbing');
+    });
+  </script>
+</body>
+</html>
