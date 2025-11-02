@@ -16,7 +16,7 @@
   <!-- CSS -->
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; scroll-padding-top: 70px; }
 
     header { background-color: #d4f8d4; text-align: center; padding: 1.5rem 1rem; position: relative; z-index: 10; }
     header h1 { font-size: 2rem; color: #006400; }
@@ -28,10 +28,10 @@
 
     section { padding: 2rem 1rem; max-width: 1200px; margin: auto; }
 
-    .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; background-color: #fff; padding: 1rem; border-radius: 10px; }
     .product { border-radius: 10px; background: linear-gradient(145deg, #f0fff0, #d4f8d4); padding: 1rem; text-align: center; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .product:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
-    .product img { width: 100%; max-width: 250px; border-radius: 10px; margin-bottom: 10px; background-color: #fff; }
+    .product img { width: 100%; max-width: 250px; border-radius: 10px; margin-bottom: 10px; }
     .badge { position: absolute; top: 10px; padding: 0.3rem 0.6rem; border-radius: 5px; font-weight: bold; color: #fff; font-size: 0.9rem; }
     .in-stock { left: 10px; background-color: #28a745; }
     .coming-soon { left: 10px; background-color: #dc3545; }
@@ -41,6 +41,19 @@
     .btn-buy:hover { background-color: #005f26; transform: scale(1.05); }
 
     .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem; }
+
+    /* Location & Map */
+    .location iframe { width: 100%; height: 500px; border: none; border-radius: 10px; margin-bottom: 1rem; }
+    .btn-map { background-color: #007a33; color: #fff; padding: 0.7rem 1.2rem; border-radius: 5px; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
+    .btn-map:hover { background-color: #005f26; transform: scale(1.05); }
+
+    /* About Us */
+    .about-box { background: #e6ffe6; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: justify; }
+
+    /* Contact */
+    .contact-box { display: flex; flex-direction: column; align-items: flex-start; background: #d4f8d4; padding: 1rem; border-radius: 10px; max-width: 400px; margin: auto; margin-top: 1rem; }
+    .contact-box a { color: #004d00; text-decoration: none; margin: 0.5rem 0; font-weight: bold; display: flex; align-items: center; gap: 0.5rem; }
+    .contact-box a .icon { font-size: 1.1rem; }
 
     /* Fade animation */
     .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
@@ -97,17 +110,18 @@
     </div>
   </div>
 </section>
+
 <section id="location" class="fade-up">
   <h2 class="section-title">Our Location</h2>
   <div class="location">
-    <iframe src="https://www.google.com/maps?q=32.1882,74.1815&hl=es;z=14&output=embed" allowfullscreen style="width:100%; height:500px; border:none; border-radius:10px;"></iframe>
-    <a href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank" class="btn-buy" style="display:inline-block; margin-top:10px;">Get Directions</a>
+    <iframe src="https://www.google.com/maps?q=32.1882,74.1815&hl=es;z=14&output=embed" allowfullscreen></iframe>
+    <a href="https://maps.app.goo.gl/kLt2mYa6xwhbgu23A" target="_blank" class="btn-map">Get Directions</a>
   </div>
 </section>
 
 <section id="about" class="fade-up">
   <h2 class="section-title">About Us</h2>
-  <div class="about-box" style="background:#e6ffe6; padding:1.5rem; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); text-align:justify;">
+  <div class="about-box">
     <p>
       At أزكى واٹر | Azka Water, we are committed to providing the purest and most refreshing water in Gujranwala.
       Our bottles are carefully sourced and sanitized to ensure the highest quality for our customers.
@@ -119,21 +133,23 @@
 <section id="contact" class="fade-up">
   <h2 class="section-title">Contact Us</h2>
   <div class="contact-box">
-    <a href="tel:+923021607004">📞 0302 1607004</a>
-    <a href="tel:+923009645627">📞 0300 9645627</a>
-    <a href="tel:+923008640032">📞 0300 8640032</a>
+    <a href="tel:+923021607004"><span class="icon">📞</span> 0302 1607004</a>
+    <a href="tel:+923009645627"><span class="icon">📞</span> 0300 9645627</a>
+    <a href="tel:+923008640032"><span class="icon">📞</span> 0300 8640032</a>
     <a href="https://wa.me/923021607004" target="_blank" class="btn-buy" style="margin-top:0.5rem;">WhatsApp Us</a>
   </div>
 </section>
 
-<!-- Smooth Scroll -->
 <script>
-  const links = document.querySelectorAll('nav a');
-  links.forEach(link => {
-    link.addEventListener('click', function(e){
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({behavior:'smooth'});
+      const targetID = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetID);
+      if(targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 </script>
