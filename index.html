@@ -5,90 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أزكى واٹر | Azka Water</title>
 
-  <link rel="icon" type="image/png" href="15984.png">
+  <link rel="icon" href="Logo">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #ffffff; color: #004d00; scroll-behavior: smooth; }
 
-    header { background-color: #f0fff0; text-align: center; padding: 2.5rem 1.5rem; border-bottom: 2px solid #d4f8d4; }
-    .logo-main { max-width: 120px; margin-bottom: 0.5rem; }
-    header h1 { font-size: 2.2rem; color: #006400; }
+    header { background-color: #f0fff0; text-align: center; padding: 3rem 1rem; border-bottom: 2px solid #d4f8d4; }
+    .logo-main { max-width: 150px; margin-bottom: 1rem; border-radius: 10px; }
+    header h1 { font-size: 2.5rem; color: #006400; }
     header p { color: #2e7d32; font-weight: bold; letter-spacing: 1px; }
 
-    nav { background-color: #006400; display: flex; justify-content: center; padding: 0.8rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    nav a { color: #fff; text-decoration: none; padding: 0.5rem 1.5rem; font-weight: bold; transition: 0.3s; }
-    nav a:hover { color: #d4f8d4; }
+    nav { background-color: #006400; display: flex; justify-content: center; padding: 1rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    nav a { color: #fff; text-decoration: none; padding: 0 1.5rem; font-weight: bold; }
 
     section { padding: 4rem 1.5rem; max-width: 1100px; margin: auto; }
-    .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; color: #006400; }
+    .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.2rem; color: #006400; }
 
-    /* Light Green Surroundings for Products */
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    /* Product Cards - "Come Forward" Effect */
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
     .product { 
         background: linear-gradient(145deg, #f0fff0, #d4f8d4); 
-        padding: 2rem; 
-        border-radius: 20px; 
+        padding: 2.5rem; 
+        border-radius: 25px; 
         text-align: center; 
-        box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        text-decoration: none;
-        color: inherit;
-        display: block;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: default; /* No pointer since it doesn't open */
     }
-    .product:hover { transform: translateY(-8px); }
-    .product img { width: 100%; border-radius: 12px; margin-bottom: 1.5rem; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); }
-    .product h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .product small { color: #2e7d32; font-style: italic; }
+    /* This makes the picture come forward when hovered or tapped */
+    .product:hover, .product:active { 
+        transform: scale(1.08) translateY(-10px); 
+        box-shadow: 0 15px 30px rgba(0,100,0,0.15);
+        z-index: 10;
+    }
+    .product img { width: 100%; border-radius: 15px; margin-bottom: 1.5rem; pointer-events: none; }
+    .product h3 { font-size: 1.5rem; color: #004d00; }
 
-    /* About Us Box */
-    .about-box { background: #f0fff0; padding: 2.5rem; border-radius: 20px; text-align: center; border: 1px solid #d4f8d4; line-height: 1.8; font-size: 1.1rem; }
+    /* About Us - Aligned and Centered */
+    .about-box { 
+        background: #f0fff0; 
+        padding: 3rem; 
+        border-radius: 25px; 
+        text-align: center; 
+        border: 1px solid #d4f8d4; 
+        line-height: 1.8;
+        max-width: 850px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
 
-    /* Map Restoration */
-    .location iframe { width: 100%; height: 450px; border: none; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    /* Location with Green Background */
+    .location-wrapper { background-color: #f0fff0; width: 100%; padding: 4rem 1.5rem; }
+    .map-container { max-width: 1100px; margin: auto; }
+    .location-wrapper iframe { width: 100%; height: 450px; border: none; border-radius: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-    /* Contact Section */
-    .contact-card { background: #006400; color: white; padding: 3rem; border-radius: 25px; text-align: center; max-width: 600px; margin: auto; }
-    .phone-number { color: white; text-decoration: none; font-size: 2.2rem; font-weight: bold; display: block; margin: 1.5rem 0; transition: 0.3s; }
-    .phone-number:hover { color: #d4f8d4; }
+    /* Contact Card */
+    .contact-card { background: #006400; color: white; padding: 3.5rem; border-radius: 30px; text-align: center; max-width: 600px; margin: auto; box-shadow: 0 15px 35px rgba(0,100,0,0.2); }
+    .phone-number { color: white; text-decoration: none; font-size: 2.5rem; font-weight: bold; display: block; margin-bottom: 2rem; }
+    
+    .contact-btns { display: flex; flex-direction: column; gap: 15px; align-items: center; }
+    .btn { text-decoration: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; width: 250px; transition: 0.3s; font-size: 1.1rem; text-align: center; }
+    .btn-wa { background-color: #25d366; color: white; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
+    .btn-call { background-color: white; color: #006400; }
+    .btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
 
     /* Floating WhatsApp Icon */
-    .float-wa { position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px; background-color: #25d366; border-radius: 50px; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+    .float-wa { position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px; background-color: #25d366; border-radius: 50px; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.3); text-decoration: none; transition: 0.3s; }
     .float-wa:hover { transform: scale(1.1); }
     .wa-icon { width: 35px; height: 35px; fill: white; }
 
-    /* Lightbox (Image Pop-up) */
-    .lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
-    .lightbox img { max-width: 90%; max-height: 85%; border: 4px solid white; border-radius: 5px; }
-    .lightbox:target { display: flex; }
-    .close-btn { position: absolute; top: 25px; right: 35px; color: white; font-size: 50px; text-decoration: none; font-weight: bold; }
-
-    footer { text-align: center; padding: 3rem; color: #888; border-top: 1px solid #eee; }
+    footer { text-align: center; padding: 4rem 1rem; color: #888; font-size: 0.9rem; }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
-      .phone-number { font-size: 1.6rem; }
+        header h1 { font-size: 2rem; }
+        .phone-number { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
 <a href="https://wa.me/923021607004" class="float-wa" target="_blank">
-  <svg class="wa-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    <svg class="wa-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
 </a>
 
-<div id="pop1" class="lightbox">
-    <a href="#" class="close-btn">&times;</a>
-    <img src="14486.jpg" alt="19L Water Bottle Large">
-</div>
-<div id="pop2" class="lightbox">
-    <a href="#" class="close-btn">&times;</a>
-    <img src="IMG-20251001-WA0012.jpg" alt="Small Bottles Large">
-</div>
-
 <header>
-  <img src="15984.png" alt="Azka Water Logo" class="logo-main">
+  <img src="Logo" alt="Azka Water Logo" class="logo-main">
   <h1>أزكى واٹر | Azka Water</h1>
   <p>PURE WATER — PURE LIFE</p>
 </header>
@@ -97,49 +99,54 @@
   <a href="#products">Products</a>
   <a href="#about">About Us</a>
   <a href="#location">Location</a>
-  <a href="#contact">Order Now</a>
+  <a href="#contact">Order</a>
 </nav>
 
 <section id="products">
   <h2 class="section-title">Our Premium Range</h2>
   <div class="products">
-    <a href="#pop1" class="product">
-      <img src="14486.jpg" alt="19L Water Dispenser Bottle">
-      <h3>19L Dispenser Bottle</h3>
-      <small>Click to view large</small>
-    </a>
-    <a href="#pop2" class="product">
-      <img src="IMG-20251001-WA0012.jpg" alt="Premium PET Bottles">
-      <h3>Premium PET Bottles</h3>
-      <small>Click to view large</small>
-    </a>
+    <div class="product">
+      <img src="IMG-20251001-WA0013.jpg" alt="20L Water Bottle">
+      <h3>20 Litre Bottle</h3>
+    </div>
+    <div class="product">
+      <img src="IMG-20251001-WA0012.jpg" alt="1.5L Water Bottle">
+      <h3>1.5 Litre Bottle</h3>
+    </div>
+    <div class="product">
+      <img src="IMG-20251001-WA0012.jpg" alt="500ml Water Bottle">
+      <h3>500ml Bottle</h3>
+    </div>
   </div>
 </section>
 
 <section id="about">
   <h2 class="section-title">About Us</h2>
   <div class="about-box">
-    <p>At <strong>Azka Water</strong>, we are dedicated to bringing the highest standard of purity to Gujranwala. Our multi-stage filtration process ensures that every drop is safe, refreshing, and rich in essential minerals. From large 19L dispensers for your office to convenient bottles for your home, we provide hydration you can trust.</p>
+    <p>At <strong>Azka Water</strong>, we believe everyone deserves access to the purest hydration. Located in Gujranwala, our facility utilizes state-of-the-art purification technology to ensure every drop meets rigorous safety standards. We take pride in our reliable delivery service, ensuring your home or office never runs out of fresh, healthy water.</p>
   </div>
 </section>
 
-<section id="location">
-  <h2 class="section-title">Our Location</h2>
-  <div class="location">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.2995960083976!2d74.19015687556754!3d32.180739773918545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f29002ff0c2c5%3A0xda8268f023394391!2sAzka%20Water!5e0!3m2!1sen!2spk!4v1741630000000!5m2!1sen!2spk" allowfullscreen="" loading="lazy"></iframe>
+<div class="location-wrapper" id="location">
+  <div class="map-container">
+    <h2 class="section-title">Find Us Here</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.818446152144!2d74.1953932!3d32.182285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f29006ef0c2c5%3A0xb88e68f023394391!2sAzka%20Water!5e0!3m2!1sen!2spk!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
   </div>
-</section>
+</div>
 
 <section id="contact">
   <div class="contact-card">
-    <h2>Fresh Water, Just a Call Away</h2>
+    <h2>Ready to Order?</h2>
     <a href="tel:+923021607004" class="phone-number">0302 1607004</a>
-    <p>Click the green icon to order via WhatsApp!</p>
+    <div class="contact-btns">
+        <a href="https://wa.me/923021607004" class="btn btn-wa">Order via WhatsApp</a>
+        <a href="tel:+923021607004" class="btn btn-call">Call to Order</a>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Azka Water Gujranwala. All Rights Reserved.</p>
+  <p>© 2026 Azka Water Gujranwala. Pure Water, Pure Life.</p>
 </footer>
 
 </body>
